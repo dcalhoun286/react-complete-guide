@@ -8,7 +8,7 @@ import ExpenseFilter from '../ExpenseFilter/ExpenseFilter';
 
 const Expenses = (props) => {
 
-  const [chosenYear, setFilteredYear] = useState('');
+  const [chosenYear, setFilteredYear] = useState('2021');
 
   const filteredYearHandler = (filteredYear) => {
     console.log(`ExpenseFilter passed the value ${filteredYear} to Expenses`);
@@ -19,7 +19,7 @@ const Expenses = (props) => {
   return (
 
     <>
-      <ExpenseFilter onFilteredYearSelected={filteredYearHandler}/>
+      <ExpenseFilter selected={chosenYear} onFilteredYearSelected={filteredYearHandler}/>
       <Card className='expenses'>
         {props.expenses.map((el) => (
           <ExpenseItem
