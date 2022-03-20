@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import './Expenses.css';
 
 import Card from '../UI/Card';
@@ -6,8 +8,12 @@ import ExpenseFilter from './ExpenseFilter';
 
 const Expenses = (props) => {
 
+  const [chosenYear, setFilteredYear] = useState('');
+
   const filteredYearHandler = (filteredYear) => {
     console.log(`ExpenseFilter passed the value ${filteredYear} to Expenses`);
+
+    setFilteredYear(filteredYear);
   }
 
   return (
