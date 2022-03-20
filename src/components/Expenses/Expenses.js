@@ -4,7 +4,7 @@ import Card from '../UI/Card';
 import ExpenseItem from './ExpenseItem';
 import ExpenseFilter from './ExpenseFilter';
 
-function Expenses (props) {
+const Expenses = (props) => {
 
   return (
 
@@ -24,6 +24,6 @@ function Expenses (props) {
 
   )
 
-}
+};
 
 export default Expenses;
