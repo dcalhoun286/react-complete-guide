@@ -14,7 +14,7 @@ function ExpenseItem (props) {
 
     setTitle('Updated!');
     console.log(title);
-  }
+  };
 
   return (
 
