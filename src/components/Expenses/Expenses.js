@@ -6,10 +6,14 @@ import ExpenseFilter from './ExpenseFilter';
 
 const Expenses = (props) => {
 
+  const filteredYearHandler = (filteredYear) => {
+    console.log(`ExpenseFilter passed the value ${filteredYear} to Expenses`);
+  }
+
   return (
 
     <>
-      <ExpenseFilter />
+      <ExpenseFilter onFilteredYearSelected={filteredYearHandler}/>
       <Card className='expenses'>
         {props.expenses.map((el) => (
           <ExpenseItem

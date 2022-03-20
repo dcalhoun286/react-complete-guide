@@ -2,12 +2,18 @@
 
 import './ExpenseFilter.css';
 
-const ExpenseFilter = () => {
+const ExpenseFilter = (props) => {
 
   // const [filteredYear, setFilteredYear] = useState('');
 
   const clickHandler = (event) => {
+
+    event.preventDefault();
+
     console.log(`Filtered Year Selected: ${event.target.value}`);
+    const filteredYear = event.target.value;
+
+    props.onFilteredYearSelected(filteredYear);
   }
 
   return (
@@ -19,6 +25,7 @@ const ExpenseFilter = () => {
           <option value='2021'>2021</option>
           <option value='2020'>2020</option>
           <option value='2019'>2019</option>
+          <option value=''>(none)</option>
         </select>
       </div>
     </div>
