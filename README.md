@@ -1,6 +1,9 @@
 # react-complete-guide
 
-I decided to take a course on Udemy to get stronger on my React skills. Check out the course here: [React - The Complete Guide](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)
+I decided to take a course on Udemy to get stronger on my React skills.
+
+Check out the course on Udemy: [React - The Complete Guide](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)
+Course Code and Materials: [GitHub](https://github.com/academind/react-complete-guide-code)
 
 ## Author
 
