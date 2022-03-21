@@ -8,6 +8,8 @@ const ExpenseForm = (props) => {
   const [enteredAmount, setEnteredAmount] = useState('');
   const [enteredDate, setEnteredDate] = useState('');
 
+  const [toggled, setFormToggle] = useState(false);
+
   // const [userInput, setUserInput] = useState({
   //   enteredTitle: '',
   //   enteredAmount: '',
@@ -53,6 +55,22 @@ const ExpenseForm = (props) => {
     setEnteredAmount('');
     setEnteredDate('');
   };
+
+  const toggleHandler = (event) => {
+    event.preventDefault();
+
+    toggled ? setFormToggle(false) : setFormToggle(true) ;
+  }
+
+  if (!toggled) {
+    return (
+      <form onSubmit={toggleHandler}>
+        <div className='new-expense__actions-single'>
+          <button type='submit'>Add New Expense</button>
+        </div>
+      </form>
+    )
+  }
 
   return (
 
