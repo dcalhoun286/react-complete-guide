@@ -62,6 +62,12 @@ const ExpenseForm = (props) => {
     event.preventDefault();
 
     toggled ? setFormToggle(false) : setFormToggle(true);
+
+    if (!toggled) {
+      setEnteredTitle('');
+      setEnteredAmount('');
+      setEnteredDate('');
+    }
   }
 
   if (!toggled) {
