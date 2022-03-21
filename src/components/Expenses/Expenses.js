@@ -17,12 +17,13 @@ const Expenses = (props) => {
   }
 
   const filteredResults = props.expenses.filter((el) => {
-    if (el.date.getFullYear().toString() === chosenYear) { return true; }
+    return el.date.getFullYear().toString() === chosenYear;
   });
 
-  let expensesRendered = [];
+  let expensesRendered = [...props.expenses];
 
-  expensesRendered = chosenYear ? filteredResults : props.expenses;
+  expensesRendered = chosenYear ? filteredResults : expensesRendered;
+  console.log('filtered results: ', filteredResults);
 
   return (
 
