@@ -65,7 +65,7 @@ const ExpenseForm = (props) => {
       prevState ? setFormToggle(false) : setFormToggle(true);
     });
 
-    toggled ? setFormToggle(false) : setFormToggle(true);
+    // toggled ? setFormToggle(false) : setFormToggle(true);
 
     if (!toggled) {
       setEnteredTitle('');
