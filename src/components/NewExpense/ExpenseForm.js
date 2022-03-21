@@ -61,6 +61,10 @@ const ExpenseForm = (props) => {
   const toggleHandler = (event) => {
     event.preventDefault();
 
+    setFormToggle((prevState) => {
+      prevState ? setFormToggle(false) : setFormToggle(true);
+    });
+
     toggled ? setFormToggle(false) : setFormToggle(true);
 
     if (!toggled) {
